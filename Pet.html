@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My My Family </title>
+	<link href="./style.css" type="text/css" rel="stylesheet" />
+	<script> 
+		const buttonEl = document.getElementById("PetBtn");
+
+		function correctMax() {
+			const givenMax = document.getElementById("MaxPets").value;
+			const correctMax = 3;
+			if (givenMax == correctMax) {
+				document.getElementById("Correct").innerHTML = "Congratulations! You got it right!"
+			} else {
+				document.getElementById("Correct").innerHTML= "Sorry. The Correct Answer was 3!"
+			}
+		}
+	</script>
+
+
+</head>
+<body>
+	<header>
+		<h1>My Family</h1>
+            <button onclick="document.location='index.html'" class="button">Me</button>
+		<button onclick="document.location='Pet.html'" class="button">Pets</button>
+		<button onclick="document.location='Mom.html'" class="button">Mom</button>
+	</header>
+
+	<div class="image-container">
+		<img src="myDoggos.jpg" alt="MyDogs" class="image">
+		<div class="paragraphs">
+			<p> On the left is a picture of my 2 dogs Mia and Koda. The one on the left is Mia and the one on the right is Koda. Mia is very shy with strangers while Koda wants all the attention in the world from everyone he can get his paws on. Funny enough I got both of them for FREE. Mia was free as part of an event where dogs that have been at the animal shelter for a while would be adopted free of charge. Koda's initial family decided that it was too much work to take care of a puppy and contacted a friend, who contacted my aunt, who contacted my mom and I. Koda is also the first and only puppy that I have taken care of since we got him when he was 12 weeks old. His puppy photos are so adorable. </p>
+			<table class = "table">
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>What age I was when I got them</th>
+				<th>What age I was when they passed</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Angel</td>
+				<td>2</td>
+				<td>15</td>
+			</tr>
+			<tr>
+				<td>Sweetie</td>
+				<td>2</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>Mia</td>
+				<td>12</td>
+				<td>TBD</td>
+			</tr>
+			<tr>
+				<td>Koda</td>
+				<td>18</td>
+				<td>TBD</td>
+			</tr>
+			</tbody>
+			</table>
+			<p class = "paragraphs">According to the table above. What were the maximum amount of pets I had at the same time?</p>
+			<input type = "number" class = "input" id = "MaxPets" value = "0">
+			<button class = "button" id = "PetBtn" onclick="correctMax()"> Submit Answer</button>
+
+			<p class = "answer" id="Correct"> </p>
+		</div>
+	</div>
+<script src="index.js"></script>
+</body>
+</html>
